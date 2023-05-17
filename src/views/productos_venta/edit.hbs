@@ -1,0 +1,21 @@
+<form method="post" action="/productos_venta/edit/{{producto.id}}">
+	<div class="contenedor_add_envio">
+		<h3 class="C-PTT titulo_add">Editar Venta Producto</h3>
+		<div class="btns_contenedor_add">
+			<button type="submit" class="btn-verde">Guardar</button>
+		</div>
+		<img src="/img/granos 7.jpg">
+	</div>
+	
+	<div class="contenedor_input_edit">
+		<div class="producto_edit_contenedor">
+			<input type="texto" name="producto" value="{{producto.producto}}" placeholder="producto" required>
+		</div>
+		<input type="number" name="precio_venta" value="{{producto.precio_venta}}" placeholder="precio">
+		<input type="text" name="marca" value="{{producto.marca}}" placeholder="marca">
+		<input type="text" name="descripcion" value="{{producto.descripcion}}" placeholder="descripcion">
+		<input type="text" name="ubicacion_venta" value="{{producto.ubicacion_venta}}" placeholder="ubicacion">
+		<input type="number" name="piso_venta" value="{{producto.piso_venta}}" placeholder="piso">
+		<input type="number" name="posicion_venta" value="{{producto.posicion_venta}}" placeholder="posicion">
+	</div>
+</form>

@@ -1,0 +1,48 @@
+<table class="tabla_contenedor">
+  <div>
+    <div class="titulo_contenedor">
+      <h3 class="titulo_tabla">Enlace Productos</h3>
+      <img src="/img/granos 5.jpg">
+    </div>
+    <!-- <form action="/productos_venta/enlace_bodega/filtro" method="post">
+      <input type="text" name="producto_venta_b" placeholder="producto venta">
+      <input type="text" name="producto_bodega_b" placeholder="producto bodega">
+      <button>Buscar</button>
+    </form> -->
+
+    <form action="/productos_venta/enlace_bodega/filtro" method="post">
+    <div class="filtro_contenedor">
+      <h3 class="titulo_flitros">Filtros</h3>
+      <div class="input_filtro_contenedor">
+        <input type="text" name="producto_venta_b" placeholder="producto venta">
+        <input type="text" name="producto_bodega_b" placeholder="producto bodega">
+      </div>
+      <button class="btn-buscar">Buscar</button>
+    </div>
+  </form>
+
+    
+    <tr>
+      <th>Producto Venta</th>
+      <th>Producto Bodega</th>
+      <th class="tabla_columna_accion_th">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{{#each enlaces}}
+    <tr>
+      <td class="producto">{{producto_venta}}</td>
+      <td class="producto">{{producto_bodega}}</td>
+
+      <td class="btns-contenedor">
+        <div class="btns">
+          <a href="/productos_venta/enlace_bodega/selec_producto/{{id_productos_venta}}" class="btn-verde">enlazar producto</a>
+        </div> 
+      </td>
+    </tr>
+    
+    {{/each}}
+  </tbody>
+</table>
+  
+ 

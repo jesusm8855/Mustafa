@@ -1,0 +1,60 @@
+*{
+		margin: 0;
+		padding: 0; 
+		box-sizing: border-box;
+}
+
+body{
+		background:#000000;
+}
+
+/*Colores y Backgroud generales*/
+
+.C-BTT{ /*color blaco para textos de tabla */
+	color:#949494;
+}
+
+.C-VTT{ /*color verde para textos de tabla*/ 
+	color:#3b840d;
+}
+
+.color_red{
+	color:red;
+}
+
+.C-PTT{ /*color pricipal titulo de tabla*/
+	color:#cacaca;
+}
+
+.C-ACTT{/*color azul claro para textos de tabla*/
+	color:#118fb5;
+}
+
+.B-T{ /*backgroud de tablas*/
+	background: #111111;
+}
+
+.B-FTT{ /*background filas titulos de tabla*/
+	background:#00390273;
+}
+
+.C-FTT{ /*color filas titulos de tabla*/
+	color: #fbff00 ;
+}
+
+.B-FT{ /*background filas de la tabla*/
+
+}
+
+.B-NTL{ /*background negro para tarea lista en tabla lista*/
+	background: #0e0e0e;
+}
+
+
+.HD{ /*ocultar elementos*/
+	display: none;
+}
+
+.NHD{ /*desocultarelementos*/
+	display: block;
+}

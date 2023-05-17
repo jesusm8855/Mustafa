@@ -1,0 +1,25 @@
+<form method="post" action="/productos_bodega/edit/{{producto.id}}">
+	<div class="contenedor_add_envio">
+		<h3 class="C-PTT titulo_add">Editar Bodega Producto</h3>
+		<div class="btns_contenedor_add">
+			<button type="submit" class="btn-verde">Guardar</button>
+		</div>
+		<img src="/img/granos 7.jpg">
+	</div>
+
+
+	<div class="contenedor_input_edit">
+		<div class="producto_edit_contenedor">
+			<input type="text" name="producto" value="{{producto.producto}}" placeholder="producto" required>
+		</div>
+		<input type="text" name="marca" value="{{producto.marca}}" placeholder="marca">
+		<input type="text" name="cantidad_bodega" value="{{producto.cantidad_bodega}}" placeholder="cantidad" requred>
+		<input type="text" name="cantidad_minima_bodega" value="{{producto.cantidad_minima_bodega}}" placeholder="cantidad minima" required>
+		<input type="text" name="unidad_medida_bodega" value="{{producto.unidad_medida_bodega}}" placeholder="unidad medida">
+		<input type="text" name="ubicacion_bodega" value="{{producto.ubicacion_bodega}}" placeholder="ubidacion">
+		<input type="number" name="piso_bodega" value="{{producto.piso_bodega}}" placeholder="piso">
+		<input type="number" name="posicion_bodega" value="{{producto.posicion_bodega}}" placeholder="posicion">
+		<input type="text" name="lugar_pedido_bodega" value="{{producto.lugar_pedido_bodega}}" placeholder="lugar pedidos">
+		<input type="text" name="descripcion" value="{{producto.descripcion}}" placeholder="descripcion">
+	</div>
+</form>

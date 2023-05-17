@@ -1,0 +1,89 @@
+
+
+<table class="tabla_contenedor">
+  <div class="titulo_contenedor">
+    <a href="/productos_bodega/add">Agregar Producto</a>
+    <h3 class="titulo_tabla">Bodega Productos</h3>
+    <img src="/img/frustos secos 1.jpg">
+    <a href="/productos_venta/enlace_bodega">Enlaces Productos</a>
+  </div>
+  <div class="btns-traslado-contenedor">
+      <buttom class="btn-info" id="sumit_pedir_bodega">Realizar pedido</button>
+  </div>
+
+<!--   <form action="/productos_bodega/filtro" method="post">
+      <input type="text" name="producto_b" placeholder="producto">
+      <input type="text" name="marca_b" placeholder="Marca">
+      <input type="text" name="ubicacion_b" placeholder="ubicacion">
+      <input type="text" name="lugar_pedido_b" placeholder="lugar pedido">
+      <a href="/productos_bodega/pedir" class="btn-rojo">por pedir</a>
+      <button class="btn-verde">Buscar</button>
+  </form> -->
+
+   <form action="/productos_bodega/filtro" method="post">
+    <div class="filtro_contenedor">
+      <h3 class="titulo_flitros">Filtros</h3>
+      <div class="input_filtro_contenedor">
+        <input type="text" name="producto_b" placeholder="producto">
+        <input type="text" name="marca_b" placeholder="Marca">
+        <input type="text" name="ubicacion_b" placeholder="ubicacion">
+        <input type="text" name="lugar_pedido_b" placeholder="lugar pedido">
+      
+    </div>
+    <div class="btns-filtro-contenedor">
+      <button class="btn-buscar">Buscar</button>
+      <a href="/productos_bodega/pedir" class="btn-pedir-filtro">Por Pedir</a>
+    </div>
+    </div>
+  </form>
+
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Marca</th>
+      <th>C-A</th>
+      <th>C-M</th>
+      <th>U-M</th>
+      <th>Ubicacion</th>
+      <th>Piso</th>
+      <th>Posicion</th>
+      <th>Lugar pedido</th>
+      <th class="tabla_columna_accion_th">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <form action="/productos_bodega/pedido" method="post" id="formulario_pedir_bodega">
+  	{{#each Productos}}
+    <tr>
+      
+      {{#if estado_cantidades_bodega}}
+        <td class="producto color_red">{{producto}}</td>
+      {{else}}
+        <td class="producto">{{producto}}</td>
+      {{/if}}
+
+      <td class="C-BTT">{{marca}}</td>
+      <td class="C-VTT">{{cantidad_bodega}}</td>
+      <td class="color_red">{{cantidad_minima_bodega}}</td>
+      <td class="C-BTT">{{unidad_medida_bodega}}</td>
+      <td class="C-BTT">{{ubicacion_bodega}}</td>
+      <td class="C-BTT">{{piso_bodega}}</td>
+      <td class="C-BTT">{{posicion_bodega}}</td>
+      <td class="C-ACTT">{{lugar_pedido_bodega}}</td>
+         <td class="btns-contenedor">
+        <div class="btns">
+         <a href="/productos_bodega/edit/{{id}}" class="btn-verde">Editar</a>
+            <input type="number" name="id_producto" tabindex="none" hidden value="{{id}}">
+            <input class="btn-pedir" name="cantidad_pedido_bodega" value="{{cantidad_pedido_bodega}}"placeholder="pedir" tabindex="1" required>  
+         <a href="/productos_bodega/delete/{{id}}" class="btn-rojo">Borrar</a> 
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+</form> 
+  </tbody>
+</table>
+
+
+
+

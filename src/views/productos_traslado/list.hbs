@@ -1,0 +1,65 @@
+<table class="tabla_contenedor">
+  <div>
+    <div class="titulo_contenedor">
+      <a href="/productos_traslado">Traslado Productos</a>
+      <h3 class="titulo_tabla">Lista Traslado</h3>
+      <img src="/img/granos3.jpg">
+      <a href="/productos_venta/enlace_bodega">Enlaces Productos</a>
+    </div>
+    <div class="btns-traslado-contenedor">
+      <a href="/productos_traslado/concretar-list" class="btn-verde">Concretar</a>
+      <a href="/productos_traslado/reset-list" class="btn-rojo">Borrar TD</a>
+    </div>
+  </div>
+    <tr>
+      <th>Producto</th>
+      <th>Marca</th>
+      <th>cantidad</th>
+      <th>U-M</th>
+      <th>Ubicacion</th>
+      <th>piso</th>
+      <th>posicion</th>
+      <th class="tabla_columna_accion_th">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{{#each Productos}}
+	<tr>
+  	{{#if estado_traslado}}
+    
+      <td class="producto P-L">{{producto_bodega}}</td>
+      <td class="C-BTT P-L">{{marca}}</td>
+      <td class="C-BTT P-L">{{cantidad_traslado}}</td>
+      <td class="C-BTT P-L">{{unidad_medida_bodega}}</td>
+      <td class="C-BTT P-L">{{ubicacion_bodega}}</td>
+      <td class="C-BTT P-L">{{piso_bodega}}</td>
+      <td class="C-BTT P-L">{{posicion_bodega}}</td>
+
+      <td class="btns-contenedor P-L">
+        <div class="btns">
+          <a href="/productos_traslado/desmarcar/{{id_producto_venta}}" class="btn-rojo">Desmarcar</a>
+        </div> 
+      </td>
+      {{else}}
+
+     <td class="producto">{{producto_bodega}}</td>
+      <td class="C-BTT">{{marca}}</td>
+      <td class="C-BTT">{{cantidad_traslado}}</td>
+      <td class="C-BTT">{{unidad_medida_bodega}}</td>
+      <td class="C-BTT">{{ubicacion_bodega}}</td>
+      <td class="C-BTT">{{piso_bodega}}</td>
+      <td class="C-BTT">{{posicion_bodega}}</td>
+      <td class="btns-contenedor">
+        <div class="btns">
+          <a href="/productos_traslado/marcar/{{id_producto_venta}}" class="btn-verde">Marcar</a>
+        </div> 
+      </td>
+ 
+      {{/if}}
+    </tr>
+    {{/each}}
+
+    
+
+  </tbody>
+</table>

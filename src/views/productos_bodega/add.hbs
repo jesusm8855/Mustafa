@@ -1,0 +1,29 @@
+<form method="post" action="/productos_bodega/add">
+	<div class="contenedor_add_envio">
+		<h3 class="C-PTT titulo_add">Agregar Bodega Producto</h3>
+		<div class="btns_contenedor_add">
+			<button type="submit" class="btn-verde">Registrar</button>
+			<div class="btn-info" onclick="multipleProductoBodega()">Producto +</div>
+		</div>
+		<img src="/img/granos 7.jpg">
+	</div>
+
+	<div id = "producto-multiple" class="contenedor_add">
+
+	<div class="inputs_productos_contenedor">
+		<div class="input_producto_add_contenedor">
+			<input type="texto" name="producto" class="input_producto_add" placeholder="producto" required>
+		</div>
+		<input type="text" name="marca" placeholder="marca">
+		<input type="number" name="cantidad_bodega" placeholder="cantidad actual" required>
+		<input type="number" name="cantidad_minima_bodega" placeholder="cantidad minima" required>
+		<input type="text" name="unidad_medida_bodega" placeholder="unidad de medida"> 
+		<input type="text" name="ubicacion_bodega" placeholder="ubicacion">
+		<input type="number" name="piso_bodega" placeholder="piso">
+		<input type="number" name="posicion_bodega" placeholder="posicion">
+		<input type="tixt" name="lugar_pedido_bodega" placeholder="lugar de pedido">
+		<input type="text" name="descripcion" placeholder="descripcion">
+	</div>
+
+	</div>
+</form>

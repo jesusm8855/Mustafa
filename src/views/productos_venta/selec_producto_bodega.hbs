@@ -1,0 +1,37 @@
+
+   
+    <div class="titulo_contenedor">
+      <a href="/productos_traslado/lista">Lista Traslado</a>
+      <h3 class="titulo_tabla">Traslado Productos</h3>
+      <img src="/img/granos 5.jpg">
+      <a href="/productos_venta/enlace_bodega">Enlaces Productos</a>
+    </div>
+
+     <form action="/productos_venta/edit_enlace/{{id}}" method="post">
+        <input type="number" name="id_bodega" value="" class="id_producto_venta" hidden>
+        <div class="btns-traslado-contenedor">
+        <button class="btn-verde">confirmar seleccion</button>
+        </div>   
+    </form>
+    
+<!-- <form action="/productos_venta/enlace_bodega/selec_producto/filter/{{id}}" method="post">
+      <input type="text" name="producto" placeholder="producto">
+      <button>Buscar</button>
+    </form> --> 
+    <form action="/productos_venta/enlace_bodega/selec_producto/filter/{{id}}" method="post">
+    <div class="filtro_contenedor">
+      <h3 class="titulo_flitros">Filtros</h3>
+      <div class="input_filtro_contenedor">
+        <input type="text" name="producto" placeholder="producto">
+      </div>
+      <button class="btn-buscar">Buscar</button>
+    </div>
+  </form>
+
+    
+   
+    <div class="productos_enlace_contenedor">
+     {{#each productos}}
+          <button onclick="nuevodato({{id}})" id="{{id}}" class="producto_enlace_select">{{producto}}</button>
+      {{/each}}
+    </div>
